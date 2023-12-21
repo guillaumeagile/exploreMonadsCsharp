@@ -92,6 +92,7 @@ namespace Sample.WholeModelTests.Gateways
             await sut.Delete(fakeCOntent, CancellationToken.None);
             var res = await sut.Get(fakeCOntent.Uid, CancellationToken.None);
             // ASSERT
+            
             await res.MapAsync(
                 (val) =>
                 {

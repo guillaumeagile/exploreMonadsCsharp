@@ -12,14 +12,9 @@ public class ContentService<T> : IContentServiceAsync<T>      where T : Content
     {
         throw new NotImplementedException();
     }
+    
 
-
-    Task<Either<string, Content>> IContentServiceAsync.Get(string uid, CancellationToken token)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Either<IEnumerable<string>, IEnumerable<T>>> Get(IEnumerable<string> uids, CancellationToken token)
+    public Task<Either<IEnumerable<Exception>, IEnumerable<T>>> Get(IEnumerable<string> uids, CancellationToken token)
     {
         throw new NotImplementedException();
     }
@@ -54,7 +49,12 @@ public class ContentService<T> : IContentServiceAsync<T>      where T : Content
         throw new NotImplementedException();
     }
 
-    Task<Either<string, T>> IContentServiceAsync<T>.Get(string uid, CancellationToken token)
+    Task<Either<Exception, T>> IContentServiceAsync<T>.Get(string uid, CancellationToken token)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Either<string, Content>> Get(string uid, CancellationToken token)
     {
         throw new NotImplementedException();
     }

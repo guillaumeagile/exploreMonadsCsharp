@@ -16,6 +16,7 @@ namespace Sample.WholeModelTests.Services
             var content1 = new Content() { Uid = "ok"};
             var res = await service.Save(content1,CancellationToken.None);
             res.Match((x)=> Assert.True(true),(x)=> Assert.True(false));
+           
         }
         [Fact]
         public async void TestContentServiceSaveFail()

@@ -17,8 +17,8 @@ namespace Sample.Core.Abstractions.Services
         /// <param name="uid"></param>
         /// <param name="token"></param>
         /// <returns>left:uid, right: Entity</returns>
-        Task<Either<string,T>> Get(string uid, CancellationToken token);
-        Task<Either<IEnumerable<string>,IEnumerable<T>>> Get(IEnumerable<string> uids, CancellationToken token);
+        Task<Either<Exception,T>> Get(string uid, CancellationToken token);
+        Task<Either<IEnumerable<Exception>,IEnumerable<T>>> Get(IEnumerable<string> uids, CancellationToken token);
         Task<Either<Exception, IEnumerable<T>>> Get(Expression<Func<T, bool>> predicate, CancellationToken token);
         Task<Either<Exception, IEnumerable<T>>> GetAll(CancellationToken token);
         Task<Either<T,T>> Save(T content, CancellationToken token);
